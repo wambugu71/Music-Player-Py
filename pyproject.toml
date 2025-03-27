@@ -1,0 +1,59 @@
+[project]
+name = "PyPlayer"
+version = "0.2.4"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Wambugu Kinyua", email = "wambugukinyua@duck.com" }
+]
+dependencies = [
+  "flet==0.27.1","flet_audio", "pillow","mutagen","flet_permission_handler"
+]
+
+[tool.flet]
+# org name in reverse domain name notation, e.g. "com.mycompany".
+# Combined with project.name to build bundle ID for iOS and Android apps
+org = "player.wambugu.kinyua"
+
+# project display name that is used as an app title on Android and iOS home screens,
+# shown in window titles and about app dialogs on desktop.
+product = "wambuguplayer"
+
+# company name to display in about app dialogs
+company = "Flet"
+
+# copyright text to display in about app dialogs
+copyright = "Copyright (C) 2025 by Flet"
+
+[tool.flet.app]
+path = "src"
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]==0.26.0"
+]
+
+[tool.flet.android.permission]
+"android.permission.MANAGE_EXTERNAL_STORAGE" = true
+"android.permission.READ_EXTERNAL_STORAGE" = true
+"android.permission.WRITE_EXTERNAL_STORAGE" = true
+"android.permission.FOREGROUND_SERVICE" = true
+"android.permission.MODIFY_AUDIO_SETTINGS" = true
+
+
+[tool.flet.splash]
+android = true
+[tool.flet.app.boot_screen]
+show = true
+message = "Loading  app assets..."
+
+[tool.flet.app.startup_screen]
+show = true
+message = "Loading  app assets..."
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "0.26.0"}
