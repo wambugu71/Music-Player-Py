@@ -54,7 +54,7 @@ jobs:
 
     - name: Flet Build AAB
       run: |
-        flet build aab --verbose --build-number=$BUILD_NUMBER --build-version=$BUILD_VERSION
+        flet build aab --verbose  --compile-app --compile-packages --build-number=$BUILD_NUMBER --build-version=$BUILD_VERSION
 
     - name: Upload AAB Artifact
       uses: actions/upload-artifact@v4.3.4  # https://github.com/marketplace/actions/upload-a-build-artifact
