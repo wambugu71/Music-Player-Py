@@ -23,7 +23,7 @@ env:
   PYTHON_VERSION: 3.12.8
 
   # flet-cli version to install for `flet build`
-  FLET_CLI_VERSION: 0.27.5
+  FLET_CLI_VERSION: 0.27.6
 
   # Ensures Python uses UTF-8 encoding by default
   PYTHONUTF8: 1
@@ -54,7 +54,7 @@ jobs:
 
     - name: Flet Build APK
       run: |
-        flet build apk --verbose --build-number=$BUILD_NUMBER --build-version=$BUILD_VERSION
+        flet build apk --verbose --compile-app --compile-packages --build-number=$BUILD_NUMBER --build-version=$BUILD_VERSION
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4.3.4  # https://github.com/marketplace/actions/upload-a-build-artifact
