@@ -3,6 +3,9 @@
 A modern and feature-rich music player built with Python, that can run on all platforms. Yes you heard  that right!
 Running  python  on  all platforms (Android, IOS, MacOS, Windows & Linux and web browsers) with mear  native  performance no lags.
 ![Main app](screenshot.png)
+```
+Leave a star!
+``` 
 ## Features
 
 *   **Sleek User Interface:**  A visually appealing and intuitive user interface for a seamless music listening experience.
